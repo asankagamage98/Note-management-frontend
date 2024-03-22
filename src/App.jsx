@@ -9,7 +9,7 @@ import EditNote from "./pages/EditNote"
 function App() {
  
   return (
-    <div>
+    <div className="bg-gray-50">
       <NavBar/>
         <Routes>
               <Route path="/" element={<Home/>}/>

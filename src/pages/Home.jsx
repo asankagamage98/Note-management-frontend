@@ -1,8 +1,12 @@
 import React from 'react'
+import NoteCard from '../componets/cards/NoteCard'
 
 export default function Home() {
   return (
-    <div><h1 className='text-blue-500'>mt home</h1></div>
+    <div>
+      <p className='text-4xl text-center backdrop:font-bold text-gray-900 dark:text-blue mb-3 w-full p-5 '>All Notes</p>
+      <NoteCard/>
+    </div>
   )
 }
 
