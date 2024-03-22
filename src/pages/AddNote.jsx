@@ -1,7 +1,11 @@
-import React from 'react'
+import CreateNoteForm from "../componets/CreateNoteForm";
+
 
 export default function AddNote() {
+
   return (
-    <div>AddNote</div>
+    <div>
+      <CreateNoteForm/>
+    </div>
   )
 }
