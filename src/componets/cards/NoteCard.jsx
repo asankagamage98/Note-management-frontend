@@ -4,12 +4,13 @@ import NoteModel from '../model/NoteModel';
 
 export default function NoteCard() {
     const [notes, setNotes] = useState([]);
-    const [modalOpen, setModalOpen] = useState(false);
     const [data, setData] = useState(null)
-
-    const toggleModal = () => {
-        setModalOpen(!modalOpen);
-    };
+    // const [modalOpen, setModalOpen] = useState(false);
+    
+    // const toggleModal = () => {
+    //     setModalOpen(!modalOpen);
+    // };
+    const [openModal, setOpenModal] = useState(false);
 
     const fetchNotes = () => {
         axios.get(`http://localhost:3000/api/note/`)
@@ -47,7 +48,7 @@ export default function NoteCard() {
                             </div>
                             <div className="text-base font-semibold leading-7">
                                 <p>
-                                    <a href="#"  onClick={toggleModal} className="text-sky-500 transition-all duration-300 group-hover:text-white">Read the note &rarr;</a>
+                                    <a href="#"  onClick={() => setOpenModal(true)} className="text-sky-500 transition-all duration-300 group-hover:text-white">Read the note &rarr;</a>
                                 </p>
                             </div>
                         </div>
@@ -58,7 +59,7 @@ export default function NoteCard() {
 
         {/* Main modal */}
 
-        {modalOpen && (<NoteModel data={data} toggleModal={toggleModal} className=""/>)}
+        {openModal && (<NoteModel data={data} setOpenModal={setOpenModal} openModal={openModal} className=""/>)}
         </div>
     )
 }

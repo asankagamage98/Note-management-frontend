@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 
 
 export default function CreateNoteForm() {
@@ -69,11 +70,11 @@ const handleFormChanges = (e) => {
           <p className="text-3xl font-extrabold text-gray-900 dark:text-blue mb-3 w-full">Create Note</p>
           <div className="mb-5 w-full">
               <label htmlFor="base-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Note Title</label>
-              <input type="text" onChange={handleFormChanges} name="title" id="base-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="Add Title" />
+              <input type="text" onChange={handleFormChanges} name="title" id="base-input" required className="  block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-gray-300 focus:border-gray-500 dark:bg-gray-200 dark:border-gray-300 dark:placeholder-gray-500 dark:text-black dark:focus:ring-gray-500 dark:focus:border-gray-500 " placeholder="Add Title" />
           </div>
-          <div  className=" w-full">
+          <div  className="mb-5 w-full">
               <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Note Content</label>
-              <textarea id="message" onChange={handleFormChanges} name="content" rows="4" className="mb-5 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Add note content..."></textarea>
+              <textarea id="message" onChange={handleFormChanges} name="content" rows="4" required className="  block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-gray-300 focus:border-gray-500 dark:bg-gray-200 dark:border-gray-300 dark:placeholder-gray-500 dark:text-black dark:focus:ring-gray-500 dark:focus:border-gray-500" placeholder="Add note content..."></textarea>
           </div>
 
           <div className='w-full'>
