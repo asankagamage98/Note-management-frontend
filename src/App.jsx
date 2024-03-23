@@ -10,7 +10,7 @@ import Navbar2 from "./componets/Navbar2"
 function App() {
  
   return (
-    <div className="bg-gray-50">
+    <div className="bg-pattern min-h-screen">
       {/* <NavBar/> */}
       <Navbar2/>
         <Routes>

@@ -66,7 +66,7 @@ const handleFormChanges = (e) => {
   
   return (
     <>
-        <form onSubmit={handleSubmit} className=" max-w-sm mx-auto p-0 flex flex-col justify-center items-center h-screen ">
+        <form onSubmit={handleSubmit} className="bg-white w-full md:w-3/4 lg:w-1/3 max-w-lg mx-auto p-4 md:p-6 lg:p-8 rounded-lg shadow-xl flex flex-col justify-center items-center">
           <p className="text-3xl font-extrabold text-gray-900 dark:text-blue mb-3 w-full">Create Note</p>
           <div className="mb-5 w-full">
               <label htmlFor="base-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Note Title</label>
@@ -78,7 +78,7 @@ const handleFormChanges = (e) => {
           </div>
 
           <div className='w-full'>
-              <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+              <button type="submit" className="w-full text-secondary bg-primary hover:bg-primary-hover focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
           </div>
         </form>
 

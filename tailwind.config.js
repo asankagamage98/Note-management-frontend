@@ -18,4 +18,14 @@ export default {
     // ...
     require('flowbite/plugin'),
   ],
+  theme: {
+    colors: {
+      'primary': '#260c1a',
+      'primary-hover': '#3e142a',
+      'secondary': '#DE9E36',
+      'light': '#FBF5F3',
+      'successs': '#091E05',
+      'error': '#A4031F',
+    }
+  }
 };
