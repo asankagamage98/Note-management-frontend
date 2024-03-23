@@ -4,6 +4,10 @@ import React, {
 } from 'react';
 
 import axios from 'axios';
+import {
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 export default function EditNote() {
