@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 
 export default function CreateNoteForm() {
-  const navigate = useNavigate();
-
   const [form, setForm] = useState({
     title: "",
     content: "",
@@ -15,13 +12,12 @@ export default function CreateNoteForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const apiUrl = import.meta.env.VITE_NOTE_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/note/create",
-        form
-      );
+      const response = await axios.post(`${apiUrl}`, form);
 
       // Display success toast for note creation
       Swal.fire({
@@ -40,9 +36,6 @@ export default function CreateNoteForm() {
 
       // Reset the form fields if needed
       e.target.reset();
-
-      // You can also perform any additional actions here based on the success response
-      console.log(response.data);
     } catch (error) {
       // Display error toast if note creation failed
       Swal.fire({

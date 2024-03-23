@@ -17,9 +17,11 @@ export default function EditNote() {
 
   const { id } = useParams();
 
+  const apiUrl = import.meta.env.VITE_NOTE_API_URL;
+
   const gethById = () => {
     axios
-      .get(`http://localhost:3000/api/note/${id}`)
+      .get(`${apiUrl}${id}`)
       .then((res) => {
         setForm(res.data);
       })
@@ -35,10 +37,7 @@ export default function EditNote() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(
-        `http://localhost:3000/api/note/${id}`,
-        form
-      );
+      const response = await axios.put(`${apiUrl}${id}`, form);
 
       // Display success toast for note creation
       Swal.fire({

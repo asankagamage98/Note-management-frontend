@@ -13,8 +13,8 @@ export default function Navbar2() {
   const onClickHome = (e) => {
     navigate(`/`);
   };
-  const onClickCont = (e) => {
-    navigate(`/contacts`);
+  const onClickAbout = (e) => {
+    navigate(`/about`);
   };
 
   useEffect(() => console.log(currentPath), [currentPath]);
@@ -50,12 +50,12 @@ export default function Navbar2() {
           Create
         </NavbarLink>
         <NavbarLink
-          onClick={onClickCont}
+          onClick={onClickAbout}
           className={
-            currentPath == "/contacts" ? "text-secondary" : "text-white"
+            currentPath == "/about" ? "text-secondary" : "text-white"
           }
         >
-          Contact
+          About
         </NavbarLink>
       </Navbar.Collapse>
     </Navbar>

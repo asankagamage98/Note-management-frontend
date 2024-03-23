@@ -3,6 +3,7 @@ import { Button, Modal } from "flowbite-react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { format } from "date-fns";
 
 export default function NoteModel({
   data,
@@ -10,6 +11,14 @@ export default function NoteModel({
   openModal,
   fetchNotes,
 }) {
+
+  
+  const formatDate = (dateString) => {
+    return format(new Date(dateString), "MMMM dd, yyyy hh:mm a");
+  };
+
+  const apiUrl = import.meta.env.VITE_NOTE_API_URL;
+
   const remove = (e, id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -22,7 +31,7 @@ export default function NoteModel({
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3000/api/note/${id}`)
+          .delete(`${apiUrl}${id}`)
           .then(() => {
             Swal.fire({
               title: "Deleted!",
@@ -52,15 +61,11 @@ export default function NoteModel({
         </Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            <p className="text-base leading-relaxed text-black">
               {data.content}
             </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              The European Union’s General Data Protection Regulation (G.D.P.R.)
-              goes into effect on May 25 and is meant to ensure a common set of
-              data rights in the European Union. It requires organizations to
-              notify users as soon as possible of high-risk data breaches that
-              could personally affect them.
+            <p className="text-base leading-relaxed  text-secondary">
+              Last updated : {formatDate(data.updatedAt)}
             </p>
           </div>
         </Modal.Body>
