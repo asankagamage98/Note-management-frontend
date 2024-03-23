@@ -23,7 +23,7 @@ export default function Navbar2() {
   return (
     <Navbar fluid className='pe-5 bg-primary fixed top-0 w-full z-50 border-gray-200 dark:bg-primary ' >
       <Navbar.Brand className=''>
-        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8 sm:h-9 ps-4" alt="Flowbite React Logo" />
+        <img src="/public/note3.svg" className="mr-3 h-8 sm:h-9 ps-4" alt="Flowbite React Logo" />
         <span className="self-center whitespace-nowrap text-xl font-normal text-secondary">Quick Note</span>
       </Navbar.Brand>
       <Navbar.Toggle />
