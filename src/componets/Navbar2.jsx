@@ -24,7 +24,7 @@ export default function Navbar2() {
       fluid
       className="pe-5 bg-primary fixed top-0 w-full z-50 border-gray-200 dark:bg-primary "
     >
-      <Navbar.Brand className="">
+      <Navbar.Brand className="" onClick={onClickHome}>
         <img
           src="/public/note3.svg"
           className="mr-3 h-8 sm:h-9 ps-4"
