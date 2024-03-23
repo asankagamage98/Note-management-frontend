@@ -1,9 +1,9 @@
-import CreateNoteForm from "../componets/CreateNoteForm";
+import CreateNoteForm from '../componets/CreateNoteForm'
 
 export default function AddNote() {
-  return (
-    <div className="relative w-full h-screen flex flex-col justify-center">
-      <CreateNoteForm />
-    </div>
-  );
+    return (
+        <div className="relative w-full h-screen flex flex-col justify-center">
+            <CreateNoteForm />
+        </div>
+    )
 }
