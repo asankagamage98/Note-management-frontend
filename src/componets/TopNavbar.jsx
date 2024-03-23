@@ -9,6 +9,8 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
+import Logo from './Logo';
+
 export default function TopNavbar() {
     const navigate = useNavigate()
 
@@ -33,9 +35,9 @@ export default function TopNavbar() {
             className="pe-5 bg-primary fixed top-0 w-full z-50 border-gray-200 dark:bg-primary "
         >
             <Navbar.Brand className="" onClick={onClickHome}>
-                <img src="/public/note3.svg" className="mr-3 h-8 sm:h-9 ps-4" alt="Logo" />
-                <span className="self-center whitespace-nowrap text-xl font-normal text-secondary">
-                    Quick Note
+                <Logo />
+                <span className="self-center whitespace-nowrap text-xl font-normal text-[#ffd22e]">
+                    Quick Notes
                 </span>
             </Navbar.Brand>
             <Navbar.Toggle />
