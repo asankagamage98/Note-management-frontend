@@ -18,6 +18,7 @@ function App() {
               <Route path="/create" element={<AddNote/>}/>
               <Route path="/contacts" element={<Contacts/>}/>
               <Route path="/edit/:id" element={<EditNote/>}/>
+              
         </Routes> 
     </div>
   )

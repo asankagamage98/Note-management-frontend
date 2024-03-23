@@ -1,8 +1,6 @@
 import React, { useState} from 'react'
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
-
 
 export default function CreateNoteForm() {
 

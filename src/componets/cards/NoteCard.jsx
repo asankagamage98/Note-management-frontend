@@ -101,6 +101,7 @@ export default function NoteCard() {
             data={data}
             setOpenModal={setOpenModal}
             openModal={openModal}
+            fetchNotes={fetchNotes}
             className=""
           />
         )}
