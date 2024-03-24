@@ -7,7 +7,6 @@
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Endpoints](#endpoints)
 - [Environment variables](#environment-variables)
 
 
