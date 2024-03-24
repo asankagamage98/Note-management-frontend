@@ -2,10 +2,7 @@ import React from 'react';
 
 import axios from 'axios';
 import { format } from 'date-fns';
-import {
-  Button,
-  Modal,
-} from 'flowbite-react';
+import { Modal } from 'flowbite-react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -71,7 +68,7 @@ export default function NoteModel({ data, setOpenModal, openModal, fetchNotes })
                         </p>
                     </div>
                 </Modal.Body>
-                <Modal.Footer className=" gap-3 flex justify-between">
+                <Modal.Footer className=" gap-3 flex justify-end">
                     <div className="flex items-center">
                         <svg
                             onClick={(e) => remove(e, data._id)}
@@ -105,13 +102,6 @@ export default function NoteModel({ data, setOpenModal, openModal, fetchNotes })
                             />
                         </svg>
                     </div>
-
-                    <Button
-                        onClick={() => setOpenModal(false)}
-                        className="text-secondary bg-primary hover:bg-primary-hover"
-                    >
-                        Close
-                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
